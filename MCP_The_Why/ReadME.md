@@ -11,6 +11,7 @@
 - [How MCP Works](#how-mcp-works)
 - [Key Benefits](#key-benefits)
 - [Conclusion](#conclusion)
+- [References](#references)
 
 ## Introduction
 
@@ -110,6 +111,10 @@ While function calling was revolutionary, it created new challenges:
 
 ## Model Context Protocol: The Solution
 
+<div style="text-align: center;">
+  <img src="mcp_solution.png" alt="MCP Architecture Overview" style="max-width:50%; height:auto;">
+</div>
+
 MCP transforms the **n × m problem** into an **n + m solution**.
 
 ### Architecture Transformation
@@ -117,10 +122,16 @@ MCP transforms the **n × m problem** into an **n + m solution**.
 **Before MCP (Function Calling):**
 - Each AI system needs individual functions for each service
 - Complexity: n × m functions required
-
+<div style="text-align: center;">
+  <img src="function_calling.png" alt="Function Calling Architecture" style="max-width:50%; height:auto;">
+</div>
 **After MCP:**
 - Single MCP client connects to all servers
 - Complexity reduced to: n + m connections
+
+<div style="text-align: center;">
+  <img src="MCPvsAPI.png" alt="Function Calling Architecture" style="max-width:50%; height:auto;">
+</div>
 
 ### How MCP Works
 
@@ -142,21 +153,21 @@ MCP transforms the **n × m problem** into an **n + m solution**.
 
 ## Key Benefits
 
-### 🔧 **Reduced Complexity**
+### 🔧 Reduced Complexity
 - Linear scaling (n + m) instead of exponential (n × m)
 - Simplified architecture and maintenance
 
-### 🚀 **Improved Efficiency**
+### 🚀 Improved Efficiency
 - Eliminates manual copy-paste workflows
 - Reduces "human API" dependency
 - Streamlines AI system integration
 
-### 🛠️ **Centralized Management**
+### 🛠️ Centralized Management
 - Server-side handling of authentication and rate limiting
 - Consistent error handling across all integrations
 - Simplified updates and maintenance
 
-### 📈 **Better Scalability**
+### 📈 Better Scalability
 - Easy addition of new AI systems or services
 - Standardized protocol for all integrations
 - Future-proof architecture design
@@ -174,4 +185,7 @@ As AI continues to evolve and integrate deeper into business processes, MCP prov
 
 ---
 
-*For technical implementation details and API documentation, please refer to the official Model Context Protocol specification and developer resources.*
+## References
+
+1. OpenAI. “Function Calling.” Available at: https://platform.openai.com/docs/guides/gpt/function-calling.
+4. [CampusX YouTube Channel Video](https://www.youtube.com/watch?v=Zmy439spZB4&t=1717s)
